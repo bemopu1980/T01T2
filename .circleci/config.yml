@@ -8,7 +8,6 @@ jobs:
       - run:
           name: Saludos
           command: echo Hola Mundo!
-      - ruby/bundle-install
        - run:
           name: Imprime la fecha
           command: Date
