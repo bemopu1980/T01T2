@@ -3,18 +3,12 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
-      
     steps:
       - checkout
-      
       - run:
-          name: Dependencias
-          command: bundle install
-      
-      - run:
-          name: Compliar el sitio
-          command: bundle exec jekyll build
-          
-      - run:
-          name: Imprime la fecha actual
-          command: date
+          name: Saludos
+          command: echo Hola Mundo!
+      - ruby/bundle-install
+       - run:
+          name: Imprime la fecha
+          command: Date
