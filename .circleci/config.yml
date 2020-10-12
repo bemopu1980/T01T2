@@ -8,9 +8,14 @@ jobs:
       - checkout
       
       - run:
-          name: Saludos
-          command: echo Hola Mundo.
+          name: Dependencias
+          command: bundle install
+      
+      - run:
+          name: Compliar el sitio
+          command: bundle exec jekyll build
           
-       - run:
-          name: Imprime la fecha
-          command: Date
+      - run:
+          name: Imprime la fecha actual
+          command: date
+      
